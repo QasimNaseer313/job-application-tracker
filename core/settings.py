@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'jobs',
     'django_filters',
+    'corsheaders',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -169,3 +171,10 @@ if DATABASE_URL:
         DATABASE_URL,
         conn_max_age=600,
     )
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:5174",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
