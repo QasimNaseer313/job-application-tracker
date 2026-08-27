@@ -83,4 +83,4 @@ DB_PORT=3306
 
 ## Live API
 
-Deployed on Railway — link coming soon.
+Live API: https://job-application-tracker-tw5z.onrender.com
