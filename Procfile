@@ -1,1 +1,1 @@
-web: python manage.py migrate --run-syncdb && python manage.py createsuperuser --noinput || true && gunicorn core.wsgi --log-file -
+web: python manage.py migrate && python manage.py createsuperuser --noinput || true && gunicorn core.wsgi --log-file -
